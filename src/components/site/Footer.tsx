@@ -1,4 +1,4 @@
-import { Logo } from "./Logo";
+import oldLogoAsset from "@/assets/scaleo-header-positiva.png.asset.json";
 import { Mail, MessageCircle, Linkedin } from "lucide-react";
 
 export function Footer() {
@@ -6,7 +6,11 @@ export function Footer() {
     <footer className="border-t border-hairline bg-paper" id="contato">
       <div className="container-page grid gap-12 py-16 md:grid-cols-[1.2fr_1fr_1fr]">
         <div>
-          <Logo className="h-12 md:h-14" />
+          <img
+            src={oldLogoAsset.url}
+            alt="Scaleo — Estrutura | Processo | Crescimento"
+            className="h-12 md:h-14 w-auto"
+          />
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
             Estruturação comercial para escritórios contábeis. Processos claros,
             adaptados à realidade da sua operação.
