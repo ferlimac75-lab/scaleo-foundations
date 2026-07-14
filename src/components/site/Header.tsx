@@ -28,9 +28,9 @@ export function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="container-page flex h-80 items-center justify-between">
+      <div className="container-page flex h-24 items-center justify-between">
         <a href="#inicio" className="flex items-center" aria-label="Scaleo — Início">
-          <Logo className="h-80" />
+          <Logo className="h-20" />
         </a>
 
         <nav aria-label="Principal" className="hidden md:block">
