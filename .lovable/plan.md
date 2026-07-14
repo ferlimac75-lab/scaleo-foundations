@@ -1,35 +1,47 @@
-## Objetivo
+Plano de ajustes no site institucional da Scaleo.
 
-Trocar o wordmark tipográfico provisório pela logo oficial da Scaleo e configurar o favicon usando o ícone A dourado, dobrando o tamanho em relação ao convencional.
+## Escopo
+Ajustes pontuais de conteúdo, tamanho do logo e remoção da seção "Sobre o consultor", mantendo o design system, tipografia e paleta existentes.
 
-## Passos
+## Alterações
 
-1. **Subir os arquivos como Lovable Assets** (evita binários no repositório):
-   - `scaleo-header-positiva.png` → `src/assets/scaleo-header-positiva.png.asset.json`
-   - `Favicon_A.png` → `public/favicon-a.png` (favicon precisa ser servido por caminho estável, então vai em `public/`)
+### 1. Header — logo maior, dentro da altura do header
+- Aumentar a altura do componente `Logo` quando usado no `Header` (de `h-10 md:h-12` para algo como `h-12 md:h-14`), garantindo que ainda caiba confortavelmente dentro do `h-20` do header.
+- Manter o componente `Logo` reutilizável, passando a classe de altura por prop.
 
-2. **Componente `Logo` (`src/components/site/Logo.tsx`)**
-   - Remover o wordmark tipográfico atual (`scaleo.`).
-   - Renderizar `<img>` apontando para a logo oficial.
-   - Altura padrão maior no header (≈ 40px em mobile, ≈ 48px em desktop) preservando proporção — sem sombra, sem efeito, sem alteração de cor.
-   - `alt="Scaleo — Estrutura | Processo | Crescimento"`.
-   - Manter área de respiro adequada no header (padding vertical já existente).
+### 2. Footer — ajuste de texto
+- Remover o início da frase descritiva: "Consultoria especializada em".
+- O texto passa a começar diretamente em: "Estruturação comercial para escritórios contábeis. Processos claros, adaptados à realidade da sua operação."
 
-3. **Footer**
-   - Continua usando o mesmo componente `Logo`, apenas com uma altura um pouco maior (≈ 44px) — nenhum tratamento adicional na imagem.
+### 3. Hero — eyebrow e subtítulo
+- Trocar eyebrow de "Consultoria para escritórios contábeis" para "Estruturação Comercial para Escritórios Contábeis".
+- Trocar subtítulo para: "Ajudamos escritórios a organizar sua operação comercial de forma simples, consistente e compatível com a realidade do negócio. Menos dependência de indicações, mais previsibilidade."
 
-4. **Favicon (`src/routes/__root.tsx`)**
-   - Substituir `{ rel: "icon", href: "/favicon.ico" }` por:
-     - `{ rel: "icon", type: "image/png", sizes: "64x64", href: "/favicon-a.png" }`
-     - `{ rel: "apple-touch-icon", href: "/favicon-a.png" }`
-   - Usar 64×64 (dobro dos 32×32 convencionais) para melhorar legibilidade nas abas — o próprio PNG é quadrado com bom espaço de respiro, sem borda/glow/sombra.
-   - Remover `public/favicon.ico` padrão para não servir o ícone Lovable a crawlers.
+### 4. Como trabalhamos — título e descrição
+- Trocar título de "Quatro etapas conduzidas de forma consultiva, no ritmo do escritório." para "Quatro etapas. Uma sequência clara."
+- Trocar descrição para: "O trabalho segue uma lógica consultiva, respeitando o ritmo e as particularidades do escritório. Não há receita pronta. Há método."
 
-5. **Verificação**
-   - Confirmar visualmente: logo aparece limpa no header (sem borrão, com respiro) e o favicon dourado aparece nítido e maior na aba do navegador.
+### 5. O que será estruturado — descrição
+- Trocar descrição para: "Nem tudo precisa ser complexo. Boa parte do que falta em escritórios contábeis é organização consistente do que já existe. Estes são os elementos que estruturamos durante o trabalho."
 
-## Detalhes técnicos
+### 6. Diagnóstico Comercial — título e descrição
+- Remover "sem custo" do título principal.
+- Trocar parágrafo descritivo para: "O diagnóstico é uma reunião de escuta e observação. O objetivo não é apresentar uma proposta. É compreender a operação comercial atual e devolver uma leitura clara sobre o que pode ser organizado."
 
-- Header transparente no topo → logo positiva (fundo escuro do CTA final não recebe a logo, então não é necessária versão negativa).
-- Nenhuma alteração no design system, tipografia ou paleta.
-- Sem alterações nas outras seções.
+### 7. Remoção da seção "Sobre o consultor"
+- Remover importação e uso do componente `About` em `src/routes/index.tsx`.
+- Remover o link "Sobre" do menu do `Header`.
+- Remover o link "Sobre o consultor" do `Footer`.
+- Opcionalmente, manter o arquivo `About.tsx` sem referência (não excluir, apenas desvincular da rota).
+
+## Arquivos envolvidos
+- `src/components/site/Header.tsx`
+- `src/components/site/Footer.tsx`
+- `src/components/site/sections/Hero.tsx`
+- `src/components/site/sections/HowItWorks.tsx`
+- `src/components/site/sections/WhatWillBeStructured.tsx`
+- `src/components/site/sections/Diagnostic.tsx`
+- `src/routes/index.tsx`
+
+## Não será alterado
+- Design system, tipografia, paleta de cores, imagens, SEO, sitemap, favicon ou componentes não listados.

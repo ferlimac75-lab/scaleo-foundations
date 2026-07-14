@@ -34,14 +34,12 @@ export function Diagnostic() {
             Diagnóstico Comercial
           </p>
           <h2 className="mt-6 text-3xl leading-[1.15] sm:text-4xl md:text-[2.5rem]">
-            Uma conversa consultiva, sem custo, para compreender a situação do escritório.
+            Uma conversa consultiva para compreender a situação do escritório.
           </h2>
           <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-            O diagnóstico é conduzido diretamente pelo consultor. É uma
-            conversa objetiva, com perguntas específicas sobre a operação
-            atual, os canais de entrada e a maturidade dos processos internos.
-            Ao final, o escritório recebe uma leitura estruturada — mesmo que
-            opte por não contratar a consultoria.
+            O diagnóstico é uma reunião de escuta e observação. O objetivo não
+            é apresentar uma proposta. É compreender a operação comercial atual
+            e devolver uma leitura clara sobre o que pode ser organizado.
           </p>
 
           <ul className="mt-8 grid gap-3 text-sm text-ink">

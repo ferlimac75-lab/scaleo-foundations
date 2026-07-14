@@ -8,7 +8,6 @@ import { HowItWorks } from "@/components/site/sections/HowItWorks";
 import { WhatWillBeStructured } from "@/components/site/sections/WhatWillBeStructured";
 import { Calculator } from "@/components/site/sections/Calculator";
 import { Diagnostic } from "@/components/site/sections/Diagnostic";
-import { About } from "@/components/site/sections/About";
 import { FinalCta } from "@/components/site/sections/FinalCta";
 
 export const Route = createFileRoute("/")({
@@ -27,7 +26,6 @@ function Index() {
         <WhatWillBeStructured />
         <Calculator />
         <Diagnostic />
-        <About />
         <FinalCta />
       </main>
       <Footer />
