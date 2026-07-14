@@ -30,7 +30,7 @@ export function Header() {
     >
       <div className="container-page flex h-20 items-center justify-between">
         <a href="#inicio" className="flex items-center" aria-label="Scaleo — Início">
-          <Logo className="h-12 md:h-14" />
+          <Logo className="h-14 md:h-16" />
         </a>
 
         <nav aria-label="Principal" className="hidden md:block">

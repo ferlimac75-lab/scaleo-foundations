@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="border-t border-hairline bg-paper" id="contato">
       <div className="container-page grid gap-12 py-16 md:grid-cols-[1.2fr_1fr_1fr]">
         <div>
-          <Logo />
+          <Logo className="h-12 md:h-14" />
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
             Estruturação comercial para escritórios contábeis. Processos claros,
             adaptados à realidade da sua operação.
