@@ -8,8 +8,8 @@ export function Footer() {
         <div>
           <Logo />
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Consultoria especializada em estruturação comercial para escritórios
-            contábeis. Processos claros, adaptados à realidade da sua operação.
+            Estruturação comercial para escritórios contábeis. Processos claros,
+            adaptados à realidade da sua operação.
           </p>
         </div>
 
@@ -53,11 +53,6 @@ export function Footer() {
             <li>
               <a href="#como-funciona" className="hover:text-navy">
                 Como trabalhamos
-              </a>
-            </li>
-            <li>
-              <a href="#sobre" className="hover:text-navy">
-                Sobre o consultor
               </a>
             </li>
             <li>

@@ -23,8 +23,9 @@ export function WhatWillBeStructured() {
             Os elementos que compõem uma operação comercial organizada.
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            Não trabalhamos com pacotes fechados. A profundidade e a ordem de
-            cada elemento variam conforme o diagnóstico inicial.
+            Nem tudo precisa ser complexo. Boa parte do que falta em escritórios
+            contábeis é organização consistente do que já existe. Estes são os
+            elementos que estruturamos durante o trabalho.
           </p>
         </div>
 

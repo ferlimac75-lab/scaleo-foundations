@@ -6,7 +6,6 @@ const links = [
   { href: "#inicio", label: "Início" },
   { href: "#como-funciona", label: "Como Funciona" },
   { href: "#diagnostico", label: "Diagnóstico" },
-  { href: "#sobre", label: "Sobre" },
   { href: "#contato", label: "Contato" },
 ];
 
@@ -31,7 +30,7 @@ export function Header() {
     >
       <div className="container-page flex h-20 items-center justify-between">
         <a href="#inicio" className="flex items-center" aria-label="Scaleo — Início">
-          <Logo />
+          <Logo className="h-12 md:h-14" />
         </a>
 
         <nav aria-label="Principal" className="hidden md:block">

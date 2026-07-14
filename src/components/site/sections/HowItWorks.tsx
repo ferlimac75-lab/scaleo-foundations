@@ -34,13 +34,12 @@ export function HowItWorks() {
               Como trabalhamos
             </p>
             <h2 className="mt-6 text-3xl leading-[1.15] sm:text-4xl md:text-[2.75rem]">
-              Quatro etapas conduzidas de forma consultiva, no ritmo do escritório.
+              Quatro etapas. Uma sequência clara.
             </h2>
           </div>
           <p className="text-base leading-relaxed text-muted-foreground md:col-span-5">
-            Não trabalhamos com metodologias fechadas nem com nomes proprietários.
-            Cada projeto respeita a maturidade da operação e o tempo interno
-            necessário para que as mudanças sejam absorvidas.
+            O trabalho segue uma lógica consultiva, respeitando o ritmo e as
+            particularidades do escritório. Não há receita pronta. Há método.
           </p>
         </div>
 

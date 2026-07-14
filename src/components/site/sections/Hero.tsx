@@ -7,15 +7,15 @@ export function Hero() {
         <div className="md:col-span-6 lg:col-span-6">
           <p className="eyebrow flex items-center gap-3">
             <span className="gold-rule" aria-hidden="true" />
-            Consultoria para escritórios contábeis
+            Estruturação Comercial para Escritórios Contábeis
           </p>
           <h1 className="mt-6 text-4xl leading-[1.05] text-ink sm:text-5xl md:text-6xl">
             Estruturamos a área comercial do seu escritório contábil.
           </h1>
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            Um trabalho conduzido de forma consultiva, com processos simples e
-            compatíveis com a realidade do seu escritório — para que o
-            crescimento deixe de depender exclusivamente das indicações.
+            Ajudamos escritórios a organizar sua operação comercial de forma
+            simples, consistente e compatível com a realidade do negócio. Menos
+            dependência de indicações, mais previsibilidade.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
