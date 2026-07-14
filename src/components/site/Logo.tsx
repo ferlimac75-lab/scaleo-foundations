@@ -1,4 +1,4 @@
-import logoAsset from "@/assets/scaleo-logo-header.png.asset.json";
+import logoAsset from "@/assets/scaleo-logo-vector.svg.asset.json";
 
 interface LogoProps {
   className?: string;
