@@ -1,24 +1,36 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "@/components/site/Header";
+import { Footer } from "@/components/site/Footer";
+import { Hero } from "@/components/site/sections/Hero";
+import { Problem } from "@/components/site/sections/Problem";
+import { WhyItHappens } from "@/components/site/sections/WhyItHappens";
+import { HowItWorks } from "@/components/site/sections/HowItWorks";
+import { WhatWillBeStructured } from "@/components/site/sections/WhatWillBeStructured";
+import { Calculator } from "@/components/site/sections/Calculator";
+import { Diagnostic } from "@/components/site/sections/Diagnostic";
+import { About } from "@/components/site/sections/About";
+import { FinalCta } from "@/components/site/sections/FinalCta";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-dvh bg-background text-ink">
+      <Header />
+      <main>
+        <Hero />
+        <Problem />
+        <WhyItHappens />
+        <HowItWorks />
+        <WhatWillBeStructured />
+        <Calculator />
+        <Diagnostic />
+        <About />
+        <FinalCta />
+      </main>
+      <Footer />
     </div>
   );
 }
