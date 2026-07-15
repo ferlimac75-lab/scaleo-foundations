@@ -28,7 +28,7 @@ export function Header() {
     >
       <div className="container-page flex h-44 items-center justify-between">
         <a href="#inicio" className="flex items-center" aria-label="Scaleo — Início">
-          <Logo className="h-36" />
+          <Logo className="h-32" />
         </a>
 
         <nav aria-label="Principal" className="hidden md:block">
