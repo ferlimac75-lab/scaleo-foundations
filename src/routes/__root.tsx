@@ -50,7 +50,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
           <button
-            onClick={() => { router.invalidate(); reset(); }}
+            onClick={() => {
+              router.invalidate();
+              reset();
+            }}
             className="inline-flex items-center rounded-full bg-navy px-5 py-2.5 text-sm font-medium text-paper hover:bg-ink"
           >
             Tentar novamente
@@ -91,11 +94,31 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Lovable App" },
       { property: "og:title", content: "Lovable App" },
       { name: "twitter:title", content: "Lovable App" },
-      { name: "description", content: "Scaleo provides commercial structuring consulting for accounting firms, helping them grow beyond referrals." },
-      { property: "og:description", content: "Scaleo provides commercial structuring consulting for accounting firms, helping them grow beyond referrals." },
-      { name: "twitter:description", content: "Scaleo provides commercial structuring consulting for accounting firms, helping them grow beyond referrals." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c6a870ef-b085-4ee3-bb8d-0dbb3860e988/id-preview-29e5a97e--02467223-9936-42eb-b3d9-3322b727fc80.lovable.app-1784066152162.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c6a870ef-b085-4ee3-bb8d-0dbb3860e988/id-preview-29e5a97e--02467223-9936-42eb-b3d9-3322b727fc80.lovable.app-1784066152162.png" },
+      {
+        name: "description",
+        content:
+          "Scaleo provides commercial structuring consulting for accounting firms, helping them grow beyond referrals.",
+      },
+      {
+        property: "og:description",
+        content:
+          "Scaleo provides commercial structuring consulting for accounting firms, helping them grow beyond referrals.",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Scaleo provides commercial structuring consulting for accounting firms, helping them grow beyond referrals.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c6a870ef-b085-4ee3-bb8d-0dbb3860e988/id-preview-29e5a97e--02467223-9936-42eb-b3d9-3322b727fc80.lovable.app-1784066152162.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c6a870ef-b085-4ee3-bb8d-0dbb3860e988/id-preview-29e5a97e--02467223-9936-42eb-b3d9-3322b727fc80.lovable.app-1784066152162.png",
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

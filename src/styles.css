@@ -55,11 +55,11 @@
   --radius: 0.5rem;
 
   /* Institutional palette */
-  --paper: oklch(0.985 0.003 90);          /* warm off-white */
+  --paper: oklch(0.985 0.003 90); /* warm off-white */
   --background: oklch(1 0 0);
-  --foreground: oklch(0.18 0.03 260);       /* deep ink */
+  --foreground: oklch(0.18 0.03 260); /* deep ink */
   --ink: oklch(0.18 0.03 260);
-  --navy: oklch(0.26 0.07 258);             /* institutional blue */
+  --navy: oklch(0.26 0.07 258); /* institutional blue */
   --hairline: oklch(0.9 0.008 250);
 
   --card: oklch(1 0 0);
@@ -79,7 +79,7 @@
   --accent: oklch(0.965 0.005 250);
   --accent-foreground: var(--ink);
 
-  --gold: oklch(0.72 0.09 82);              /* refined gold */
+  --gold: oklch(0.72 0.09 82); /* refined gold */
   --gold-soft: oklch(0.88 0.05 85);
 
   --destructive: oklch(0.55 0.2 27);
@@ -106,13 +106,18 @@
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv11";
   }
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: var(--font-serif);
     font-weight: 400;
     letter-spacing: -0.02em;
     color: var(--ink);
   }
-  h1 { font-optical-sizing: auto; }
+  h1 {
+    font-optical-sizing: auto;
+  }
   ::selection {
     background: color-mix(in oklab, var(--navy) 90%, white);
     color: white;
@@ -155,6 +160,12 @@
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

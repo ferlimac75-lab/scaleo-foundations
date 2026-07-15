@@ -33,8 +33,8 @@ export function Problem() {
             A maior parte dos escritórios contábeis cresce apoiada em um único canal: a indicação.
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            É um canal legítimo e valioso — mas, quando ocupa sozinho o lugar
-            da estratégia comercial, produz efeitos que se acumulam ao longo do tempo.
+            É um canal legítimo e valioso — mas, quando ocupa sozinho o lugar da estratégia
+            comercial, produz efeitos que se acumulam ao longo do tempo.
           </p>
         </div>
 

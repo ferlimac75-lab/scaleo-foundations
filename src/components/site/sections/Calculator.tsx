@@ -28,19 +28,16 @@ export function Calculator() {
             Quanto vale, ao longo de um ano, cada oportunidade que não é acompanhada?
           </h2>
           <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-            Este exercício não pretende medir com precisão. Serve apenas para
-            colocar em perspectiva o valor recorrente que um contato bem
-            conduzido pode representar dentro de um escritório contábil.
+            Este exercício não pretende medir com precisão. Serve apenas para colocar em perspectiva
+            o valor recorrente que um contato bem conduzido pode representar dentro de um escritório
+            contábil.
           </p>
         </div>
 
         <div className="md:col-span-7">
           <div className="rounded-sm border border-hairline bg-background p-8 md:p-10">
             <div className="grid gap-8">
-              <Field
-                label="Ticket médio mensal por cliente"
-                value={currency.format(ticket)}
-              >
+              <Field label="Ticket médio mensal por cliente" value={currency.format(ticket)}>
                 <input
                   type="range"
                   min={500}
@@ -53,10 +50,7 @@ export function Calculator() {
                 />
               </Field>
 
-              <Field
-                label="Oportunidades não acompanhadas por mês"
-                value={String(lostPerMonth)}
-              >
+              <Field label="Oportunidades não acompanhadas por mês" value={String(lostPerMonth)}>
                 <input
                   type="range"
                   min={0}
@@ -69,10 +63,7 @@ export function Calculator() {
                 />
               </Field>
 
-              <Field
-                label="Permanência média (meses)"
-                value={`${months} meses`}
-              >
+              <Field label="Permanência média (meses)" value={`${months} meses`}>
                 <input
                   type="range"
                   min={6}
@@ -92,9 +83,8 @@ export function Calculator() {
                 {currency.format(annualPotential)}
               </p>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Valor cumulativo estimado ao longo do ciclo de permanência médio
-                dos clientes. Um número que costuma provocar mais reflexão do
-                que resposta imediata.
+                Valor cumulativo estimado ao longo do ciclo de permanência médio dos clientes. Um
+                número que costuma provocar mais reflexão do que resposta imediata.
               </p>
             </div>
           </div>

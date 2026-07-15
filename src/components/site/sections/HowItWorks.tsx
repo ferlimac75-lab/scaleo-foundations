@@ -38,8 +38,8 @@ export function HowItWorks() {
             </h2>
           </div>
           <p className="text-base leading-relaxed text-muted-foreground md:col-span-5">
-            O trabalho segue uma lógica consultiva, respeitando o ritmo e as
-            particularidades do escritório. Não há receita pronta. Há método.
+            O trabalho segue uma lógica consultiva, respeitando o ritmo e as particularidades do
+            escritório. Não há receita pronta. Há método.
           </p>
         </div>
 

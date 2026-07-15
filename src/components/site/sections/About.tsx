@@ -23,14 +23,14 @@ export function About() {
           <h2 className="mt-6 text-3xl leading-[1.15] sm:text-4xl">Fernando Campos</h2>
           <div className="mt-6 space-y-5 text-lg leading-relaxed text-ink">
             <p>
-              Fernando conduz pessoalmente os projetos da Scaleo. Sua atuação é
-              consultiva, próxima e direta, sempre em contato com os sócios e
-              com a equipe envolvida na operação comercial do escritório.
+              Fernando conduz pessoalmente os projetos da Scaleo. Sua atuação é consultiva, próxima
+              e direta, sempre em contato com os sócios e com a equipe envolvida na operação
+              comercial do escritório.
             </p>
             <p className="text-muted-foreground">
-              Acredita que consultoria não se faz à distância nem por meio de
-              modelos padronizados. Cada escritório tem uma história, um ritmo
-              e uma cultura — e é a partir daí que o trabalho começa.
+              Acredita que consultoria não se faz à distância nem por meio de modelos padronizados.
+              Cada escritório tem uma história, um ritmo e uma cultura — e é a partir daí que o
+              trabalho começa.
             </p>
           </div>
         </div>

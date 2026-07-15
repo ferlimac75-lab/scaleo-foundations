@@ -13,9 +13,9 @@ export function Hero() {
             Estruturamos a área comercial do seu escritório contábil.
           </h1>
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            Ajudamos escritórios a organizar sua operação comercial de forma
-            simples, consistente e compatível com a realidade do negócio. Menos
-            dependência de indicações, mais previsibilidade.
+            Ajudamos escritórios a organizar sua operação comercial de forma simples, consistente e
+            compatível com a realidade do negócio. Menos dependência de indicações, mais
+            previsibilidade.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -36,7 +36,10 @@ export function Hero() {
 
         <div className="md:col-span-6 lg:col-span-6">
           <figure className="relative">
-            <div className="absolute -left-4 -top-4 hidden h-24 w-24 border-l border-t border-gold md:block" aria-hidden="true" />
+            <div
+              className="absolute -left-4 -top-4 hidden h-24 w-24 border-l border-t border-gold md:block"
+              aria-hidden="true"
+            />
             <img
               src={heroImg}
               alt="Consultor conversando com sócio de um escritório contábil em uma reunião de diagnóstico."
@@ -45,7 +48,10 @@ export function Hero() {
               className="relative w-full rounded-sm object-cover shadow-elevated"
               fetchPriority="high"
             />
-            <div className="absolute -bottom-4 -right-4 hidden h-24 w-24 border-b border-r border-gold md:block" aria-hidden="true" />
+            <div
+              className="absolute -bottom-4 -right-4 hidden h-24 w-24 border-b border-r border-gold md:block"
+              aria-hidden="true"
+            />
           </figure>
         </div>
       </div>

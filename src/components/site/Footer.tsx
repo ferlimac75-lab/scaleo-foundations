@@ -12,8 +12,8 @@ export function Footer() {
             className="h-12 md:h-14 w-auto"
           />
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Estruturação comercial para escritórios contábeis. Processos claros,
-            adaptados à realidade da sua operação.
+            Estruturação comercial para escritórios contábeis. Processos claros, adaptados à
+            realidade da sua operação.
           </p>
         </div>
 

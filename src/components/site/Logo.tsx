@@ -1,5 +1,3 @@
-import logoAsset from "@/assets/scaleo-logo-vector.svg.asset.json";
-
 interface LogoProps {
   className?: string;
 }
@@ -7,7 +5,7 @@ interface LogoProps {
 export function Logo({ className = "h-10 md:h-12" }: LogoProps) {
   return (
     <img
-      src={logoAsset.url}
+      src="/scaleo-logo-nova.png"
       alt="Scaleo — Estrutura | Processo | Crescimento"
       className={`w-auto ${className}`}
     />

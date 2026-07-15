@@ -37,9 +37,9 @@ export function Diagnostic() {
             Uma conversa consultiva para compreender a situação do escritório.
           </h2>
           <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-            O diagnóstico é uma reunião de escuta e observação. O objetivo não
-            é apresentar uma proposta. É compreender a operação comercial atual
-            e devolver uma leitura clara sobre o que pode ser organizado.
+            O diagnóstico é uma reunião de escuta e observação. O objetivo não é apresentar uma
+            proposta. É compreender a operação comercial atual e devolver uma leitura clara sobre o
+            que pode ser organizado.
           </p>
 
           <ul className="mt-8 grid gap-3 text-sm text-ink">
@@ -50,7 +50,10 @@ export function Diagnostic() {
               "Sem apresentação comercial ou proposta durante a conversa",
             ].map((i) => (
               <li key={i} className="flex items-start gap-3">
-                <span className="mt-2.5 inline-block h-px w-4 shrink-0 bg-gold" aria-hidden="true" />
+                <span
+                  className="mt-2.5 inline-block h-px w-4 shrink-0 bg-gold"
+                  aria-hidden="true"
+                />
                 {i}
               </li>
             ))}
@@ -67,21 +70,48 @@ export function Diagnostic() {
               <div>
                 <p className="font-serif text-2xl text-navy">Recebemos sua solicitação.</p>
                 <p className="mt-3 text-sm text-muted-foreground">
-                  Em até um dia útil, o consultor entrará em contato para
-                  agendar a conversa em um horário conveniente.
+                  Em até um dia útil, o consultor entrará em contato para agendar a conversa em um
+                  horário conveniente.
                 </p>
               </div>
             ) : (
               <>
                 <div className="grid gap-5 sm:grid-cols-2">
                   <Input label="Nome" name="nome" required value={form.nome} onChange={update} />
-                  <Input label="Escritório" name="escritorio" required value={form.escritorio} onChange={update} />
-                  <Input label="E-mail" name="email" type="email" required value={form.email} onChange={update} />
-                  <Input label="Telefone" name="telefone" type="tel" value={form.telefone} onChange={update} />
+                  <Input
+                    label="Escritório"
+                    name="escritorio"
+                    required
+                    value={form.escritorio}
+                    onChange={update}
+                  />
+                  <Input
+                    label="E-mail"
+                    name="email"
+                    type="email"
+                    required
+                    value={form.email}
+                    onChange={update}
+                  />
+                  <Input
+                    label="Telefone"
+                    name="telefone"
+                    type="tel"
+                    value={form.telefone}
+                    onChange={update}
+                  />
                 </div>
-                <Input label="Número aproximado de colaboradores" name="colaboradores" value={form.colaboradores} onChange={update} />
+                <Input
+                  label="Número aproximado de colaboradores"
+                  name="colaboradores"
+                  value={form.colaboradores}
+                  onChange={update}
+                />
                 <div>
-                  <label htmlFor="mensagem" className="mb-2 block text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                  <label
+                    htmlFor="mensagem"
+                    className="mb-2 block text-xs uppercase tracking-[0.18em] text-muted-foreground"
+                  >
                     Contexto (opcional)
                   </label>
                   <textarea
@@ -110,9 +140,7 @@ export function Diagnostic() {
     </section>
   );
 
-  function update(
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) {
+  function update(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
   }
 }
@@ -134,8 +162,12 @@ function Input({
 }) {
   return (
     <div>
-      <label htmlFor={name} className="mb-2 block text-xs uppercase tracking-[0.18em] text-muted-foreground">
-        {label}{required && <span className="text-gold"> *</span>}
+      <label
+        htmlFor={name}
+        className="mb-2 block text-xs uppercase tracking-[0.18em] text-muted-foreground"
+      >
+        {label}
+        {required && <span className="text-gold"> *</span>}
       </label>
       <input
         id={name}
