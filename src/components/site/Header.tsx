@@ -50,7 +50,7 @@ export function Header() {
 
         <a
           href="#diagnostico"
-          className="hidden items-center rounded-full border border-navy px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-navy hover:text-paper md:inline-flex"
+          className="header-nav hidden items-center rounded-full border border-navy px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-navy hover:text-paper md:inline-flex"
         >
           Agendar conversa
         </a>
