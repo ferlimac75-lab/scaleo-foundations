@@ -4,8 +4,10 @@ import { Logo } from "./Logo";
 
 const links = [
   { href: "#inicio", label: "Início" },
-  { href: "#como-funciona", label: "Como Funciona" },
+  { href: "#problema", label: "Problema" },
+  { href: "#metodo-alem", label: "Método ALEM" },
   { href: "#diagnostico", label: "Diagnóstico" },
+  { href: "#como-funciona", label: "Como Funciona" },
   { href: "#contato", label: "Contato" },
 ];
 
@@ -31,7 +33,7 @@ export function Header() {
           <Logo className="w-auto" style={{ height: "126px" }} />
         </a>
 
-        <nav aria-label="Principal" className="hidden md:block">
+        <nav aria-label="Principal" className="header-nav hidden md:block">
           <ul className="flex items-center gap-9">
             {links.map((l) => (
               <li key={l.href}>
@@ -48,7 +50,7 @@ export function Header() {
 
         <a
           href="#diagnostico"
-          className="hidden items-center rounded-full border border-navy px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-navy hover:text-paper md:inline-flex"
+          className="header-nav hidden items-center rounded-full border border-navy px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-navy hover:text-paper md:inline-flex"
         >
           Agendar conversa
         </a>

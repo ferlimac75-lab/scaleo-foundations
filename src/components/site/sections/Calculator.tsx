@@ -25,12 +25,12 @@ export function Calculator() {
             Uma reflexão
           </p>
           <h2 className="mt-6 text-3xl leading-[1.15] sm:text-4xl">
-            Quanto vale, ao longo de um ano, cada oportunidade que não é acompanhada?
+            Qual é o potencial comercial do seu escritório?
           </h2>
           <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-            Este exercício não pretende medir com precisão. Serve apenas para colocar em perspectiva
-            o valor recorrente que um contato bem conduzido pode representar dentro de um escritório
-            contábil.
+            Este não é um cálculo financeiro. É um exercício para colocar em perspectiva quanto
+            representa, ao longo do tempo, cada oportunidade que hoje não recebe acompanhamento
+            estruturado.
           </p>
         </div>
 
@@ -78,12 +78,12 @@ export function Calculator() {
             </div>
 
             <div className="mt-10 border-t border-hairline pt-8">
-              <p className="eyebrow">Potencial recorrente estimado</p>
+              <p className="eyebrow">Potencial recorrente para reflexão</p>
               <p className="mt-2 font-serif text-4xl text-navy sm:text-5xl">
                 {currency.format(annualPotential)}
               </p>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Valor cumulativo estimado ao longo do ciclo de permanência médio dos clientes. Um
+                Ordem de grandeza estimada considerando a permanência média dos clientes. Um
                 número que costuma provocar mais reflexão do que resposta imediata.
               </p>
             </div>

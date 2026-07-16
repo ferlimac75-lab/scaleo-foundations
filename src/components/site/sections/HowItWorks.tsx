@@ -4,22 +4,22 @@ const steps = [
   {
     n: "I",
     title: "Diagnóstico",
-    body: "Compreendemos a operação atual do escritório: canais de entrada, gargalos, rotinas, papéis e capacidade de conversão.",
+    body: "Leitura consultiva da operação atual: canais de entrada, gargalos, rotinas, papéis e capacidade real de conversão.",
   },
   {
     n: "II",
-    title: "Estruturação",
-    body: "Desenhamos o processo comercial adequado à realidade da equipe, com etapas claras, documentação e critérios objetivos.",
+    title: "Plano de ação",
+    body: "Construção conjunta das prioridades, com escopo, sequência e critérios adequados à realidade do escritório.",
   },
   {
     n: "III",
     title: "Implantação",
-    body: "Acompanhamos a implementação junto ao time, ajustando o desenho conforme a operação real do dia a dia.",
+    body: "Acompanhamento próximo da equipe durante a estruturação de processo, ferramentas e rotinas comerciais.",
   },
   {
     n: "IV",
     title: "Acompanhamento",
-    body: "Revisões periódicas para consolidar a rotina, corrigir desvios e evoluir os indicadores ao longo do tempo.",
+    body: "Ciclos periódicos de revisão para consolidar rotinas, ajustar desvios e evoluir os indicadores ao longo do tempo.",
   },
 ];
 

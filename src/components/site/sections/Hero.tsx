@@ -23,7 +23,7 @@ export function Hero() {
               href="#diagnostico"
               className="inline-flex items-center rounded-full bg-navy px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-ink"
             >
-              Solicitar diagnóstico
+              Iniciar diagnóstico
             </a>
             <a
               href="#como-funciona"
