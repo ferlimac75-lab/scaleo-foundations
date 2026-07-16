@@ -4,8 +4,10 @@ import { Logo } from "./Logo";
 
 const links = [
   { href: "#inicio", label: "Início" },
-  { href: "#como-funciona", label: "Como Funciona" },
+  { href: "#problema", label: "Problema" },
+  { href: "#metodo-alem", label: "Método ALEM" },
   { href: "#diagnostico", label: "Diagnóstico" },
+  { href: "#como-funciona", label: "Como Funciona" },
   { href: "#contato", label: "Contato" },
 ];
 
