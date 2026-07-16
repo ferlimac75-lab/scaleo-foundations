@@ -33,7 +33,7 @@ export function Header() {
           <Logo className="w-auto" style={{ height: "126px" }} />
         </a>
 
-        <nav aria-label="Principal" className="hidden md:block">
+        <nav aria-label="Principal" className="header-nav hidden md:block">
           <ul className="flex items-center gap-9">
             {links.map((l) => (
               <li key={l.href}>
