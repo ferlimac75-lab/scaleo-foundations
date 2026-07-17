@@ -1,6 +1,6 @@
 export function WhyItHappens() {
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-16 md:py-20">
       <div className="container-page grid gap-14 md:grid-cols-12">
         <div className="md:col-span-5">
           <p className="eyebrow flex items-center gap-3">

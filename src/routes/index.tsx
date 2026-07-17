@@ -3,12 +3,11 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Hero } from "@/components/site/sections/Hero";
 import { Problem } from "@/components/site/sections/Problem";
+import { WhyItHappens } from "@/components/site/sections/WhyItHappens";
 import { Calculator } from "@/components/site/sections/Calculator";
-import { About } from "@/components/site/sections/About";
 import { MethodAlem } from "@/components/site/sections/MethodAlem";
 import { Diagnostic } from "@/components/site/sections/Diagnostic";
-import { HowItWorks } from "@/components/site/sections/HowItWorks";
-import { FinalCta } from "@/components/site/sections/FinalCta";
+import { NextStep } from "@/components/site/sections/NextStep";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -21,12 +20,11 @@ function Index() {
       <main>
         <Hero />
         <Problem />
+        <WhyItHappens />
         <Calculator />
-        <About />
         <MethodAlem />
         <Diagnostic />
-        <HowItWorks />
-        <FinalCta />
+        <NextStep />
       </main>
       <Footer />
     </div>

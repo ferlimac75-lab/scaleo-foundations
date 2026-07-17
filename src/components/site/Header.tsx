@@ -3,11 +3,9 @@ import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
 
 const links = [
-  { href: "#inicio", label: "Início" },
-  { href: "#problema", label: "Problema" },
   { href: "#metodo-alem", label: "Método ALEM" },
   { href: "#diagnostico", label: "Diagnóstico" },
-  { href: "#como-funciona", label: "Como Funciona" },
+  { href: "#proximo-passo", label: "Próximo passo" },
   { href: "#contato", label: "Contato" },
 ];
 
