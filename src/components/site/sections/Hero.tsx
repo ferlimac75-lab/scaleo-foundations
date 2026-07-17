@@ -2,7 +2,7 @@ import heroImg from "@/assets/hero-consulting.jpg";
 
 export function Hero() {
   return (
-    <section id="inicio" className="relative pt-32 pb-20 md:pt-40 md:pb-28">
+    <section id="inicio" className="relative pt-28 pb-12 md:pt-32 md:pb-16">
       <div className="container-page grid gap-14 md:grid-cols-12 md:gap-10">
         <div className="md:col-span-6 lg:col-span-6">
           <p className="eyebrow flex items-center gap-3">
@@ -18,20 +18,6 @@ export function Hero() {
             previsibilidade.
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a
-              href="#diagnostico"
-              className="inline-flex items-center rounded-full bg-navy px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-ink"
-            >
-              Iniciar diagnóstico
-            </a>
-            <a
-              href="#como-funciona"
-              className="text-sm font-medium text-navy underline-offset-4 hover:underline"
-            >
-              Como trabalhamos →
-            </a>
-          </div>
         </div>
 
         <div className="md:col-span-6 lg:col-span-6">

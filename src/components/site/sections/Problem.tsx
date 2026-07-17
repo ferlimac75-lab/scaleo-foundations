@@ -23,7 +23,7 @@ const items = [
 
 export function Problem() {
   return (
-    <section id="problema" className="bg-paper py-24 md:py-32">
+    <section id="problema" className="bg-paper py-16 md:py-20">
       <div className="container-page">
         <div className="max-w-3xl">
           <p className="eyebrow flex items-center gap-3">

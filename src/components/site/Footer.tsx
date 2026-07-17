@@ -1,5 +1,5 @@
 import oldLogoAsset from "@/assets/scaleo-header-positiva.png.asset.json";
-import { Mail, MessageCircle, Linkedin } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 
 export function Footer() {
   return (
@@ -38,27 +38,12 @@ export function Footer() {
                 contato@scaleo.com.br
               </a>
             </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/"
-                className="inline-flex items-center gap-2 hover:text-navy"
-                rel="noopener"
-              >
-                <Linkedin className="size-4 text-gold" aria-hidden="true" />
-                LinkedIn
-              </a>
-            </li>
           </ul>
         </div>
 
         <div>
           <p className="eyebrow">Institucional</p>
           <ul className="mt-4 space-y-3 text-sm text-ink">
-            <li>
-              <a href="#como-funciona" className="hover:text-navy">
-                Como trabalhamos
-              </a>
-            </li>
             <li>
               <a href="/politica-de-privacidade" className="hover:text-navy">
                 Política de Privacidade

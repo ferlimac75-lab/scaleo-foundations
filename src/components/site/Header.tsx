@@ -3,11 +3,9 @@ import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
 
 const links = [
-  { href: "#inicio", label: "Início" },
-  { href: "#problema", label: "Problema" },
   { href: "#metodo-alem", label: "Método ALEM" },
   { href: "#diagnostico", label: "Diagnóstico" },
-  { href: "#como-funciona", label: "Como Funciona" },
+  { href: "#proximo-passo", label: "Próximo passo" },
   { href: "#contato", label: "Contato" },
 ];
 
@@ -48,12 +46,6 @@ export function Header() {
           </ul>
         </nav>
 
-        <a
-          href="#diagnostico"
-          className="header-nav hidden items-center rounded-full border border-navy px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-navy hover:text-paper md:inline-flex"
-        >
-          Agendar conversa
-        </a>
 
         <button
           type="button"
@@ -81,15 +73,6 @@ export function Header() {
                   </a>
                 </li>
               ))}
-              <li className="pt-3">
-                <a
-                  href="#diagnostico"
-                  onClick={() => setOpen(false)}
-                  className="block rounded-full bg-navy px-5 py-3 text-center text-sm font-medium text-paper"
-                >
-                  Agendar conversa
-                </a>
-              </li>
             </ul>
           </nav>
         </div>

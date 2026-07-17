@@ -34,7 +34,7 @@ function startDiagnostic() {
 
 export function MethodAlem() {
   return (
-    <section id="metodo-alem" className="py-24 md:py-32">
+    <section id="metodo-alem" className="py-16 md:py-20">
       <div className="container-page">
         <div className="max-w-3xl">
           <p className="eyebrow flex items-center gap-3">

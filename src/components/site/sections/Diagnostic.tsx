@@ -278,7 +278,7 @@ export function Diagnostic() {
       id="diagnostico"
       ref={sectionRef}
       className={`relative bg-background transition-all duration-500 ${
-        phase === "idle" ? "py-24 md:py-32" : "min-h-[95vh] py-16 md:py-20"
+        phase === "idle" ? "py-16 md:py-20" : "min-h-[95vh] py-16 md:py-20"
       }`}
     >
       <div className="container-page">
