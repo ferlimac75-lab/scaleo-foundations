@@ -45,11 +45,6 @@ export function Footer() {
           <p className="eyebrow">Institucional</p>
           <ul className="mt-4 space-y-3 text-sm text-ink">
             <li>
-              <a href="#como-funciona" className="hover:text-navy">
-                Como trabalhamos
-              </a>
-            </li>
-            <li>
               <a href="/politica-de-privacidade" className="hover:text-navy">
                 Política de Privacidade
               </a>
