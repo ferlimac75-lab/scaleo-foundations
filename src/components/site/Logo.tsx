@@ -1,5 +1,5 @@
 import React from "react";
-import logoAsset from "@/assets/scaleo-logotipo-transparente-recortado.png.asset.json";
+import logoAsset from "@/assets/scaleo-logotipo-positivo-recortado-64pct.png.asset.json";
 
 interface LogoProps {
   className?: string;
