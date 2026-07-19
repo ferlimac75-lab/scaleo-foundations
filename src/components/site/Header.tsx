@@ -26,9 +26,9 @@ export function Header() {
         scrolled ? "border-b border-hairline bg-background/85 backdrop-blur-md" : "bg-transparent"
       }`}
     >
-      <div className="container-page flex h-28 items-center justify-between">
+      <div className="container-page flex h-36 items-center justify-between">
         <a href="#inicio" className="flex items-center bg-transparent" aria-label="Scaleo — Início">
-          <Logo className="aspect-[3.2/1] max-w-[520px] h-20 w-auto object-contain !bg-transparent" />
+          <Logo className="aspect-[3.2/1] max-w-[900px] h-[120px] w-auto object-contain !bg-transparent" />
         </a>
 
         <nav aria-label="Principal" className="header-nav hidden md:block">
