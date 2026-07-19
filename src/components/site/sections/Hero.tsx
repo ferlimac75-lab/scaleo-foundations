@@ -2,7 +2,7 @@ import heroImg from "@/assets/hero-consulting.jpg";
 
 export function Hero() {
   return (
-    <section id="inicio" className="relative pt-28 pb-12 md:pt-32 md:pb-16">
+    <section id="inicio" className="relative pt-44 pb-12 md:pt-56 md:pb-16">
       <div className="container-page grid gap-14 md:grid-cols-12 md:gap-10">
         <div className="md:col-span-6 lg:col-span-6">
           <p className="eyebrow flex items-center gap-3">

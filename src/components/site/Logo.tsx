@@ -11,7 +11,7 @@ export function Logo({ className = "h-10 md:h-12", style }: LogoProps) {
     <img
       src={logoAsset.url}
       alt="Scaleo — Estrutura | Processo | Crescimento"
-      className={`w-auto ${className}`}
+      className={`w-auto bg-transparent ${className}`}
       style={style}
     />
   );
