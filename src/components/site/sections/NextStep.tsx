@@ -1,6 +1,7 @@
-function openDevolutiva() {
-  if (typeof window === "undefined") return;
-  window.dispatchEvent(new CustomEvent("scaleo:start-diagnostic"));
+function goToDiagnostic() {
+  if (typeof document === "undefined") return;
+  const el = document.getElementById("diagnostico");
+  el?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 export function NextStep() {
