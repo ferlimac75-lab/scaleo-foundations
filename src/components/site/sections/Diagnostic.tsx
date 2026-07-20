@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { DevolutivaForm } from "./DevolutivaForm";
+import { WhatsAppContact } from "./WhatsAppContact";
 
 type Pillar = "A" | "L" | "E" | "M";
 type Phase = "idle" | "active" | "processing" | "result";
