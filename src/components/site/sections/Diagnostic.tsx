@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { DevolutivaForm } from "./DevolutivaForm";
+import { WhatsAppContact } from "./WhatsAppContact";
 
 type Pillar = "A" | "L" | "E" | "M";
 type Phase = "idle" | "active" | "processing" | "result";
@@ -594,25 +594,32 @@ function ResultView({
           </div>
 
           <div className="mt-14 rounded-sm border border-hairline bg-paper p-8 md:p-10">
-            <h3 className="font-serif text-2xl text-navy">Vamos aprofundar este diagnóstico?</h3>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              O diagnóstico apresentado oferece uma visão inicial da estrutura comercial do seu
-              escritório. Na Reunião de Devolutiva analisaremos os resultados em maior profundidade
-              e discutiremos possíveis caminhos de evolução considerando a realidade da sua
-              empresa.
-            </p>
             {!showForm ? (
-              <button
-                type="button"
-                onClick={onRequest}
-                className="mt-8 inline-flex items-center rounded-full bg-navy px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-ink"
-              >
-                Solicitar Reunião de Devolutiva
-              </button>
+              <>
+                <h3 className="font-serif text-2xl text-navy">
+                  Vamos aprofundar este diagnóstico?
+                </h3>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                  Você já tem uma visão inicial da maturidade comercial do seu escritório. Se quiser
+                  aprofundar essa leitura, podemos continuar a conversa pelo WhatsApp.
+                </p>
+                <button
+                  type="button"
+                  onClick={onRequest}
+                  className="mt-8 inline-flex items-center rounded-full bg-navy px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-ink"
+                >
+                  Conversar sobre meu diagnóstico
+                </button>
+              </>
             ) : (
-              <div className="mt-8">
-                <DevolutivaForm />
-              </div>
+              <WhatsAppContact
+                result={{
+                  maturityLabel: level,
+                  overall,
+                  per,
+                  weakest,
+                }}
+              />
             )}
           </div>
 

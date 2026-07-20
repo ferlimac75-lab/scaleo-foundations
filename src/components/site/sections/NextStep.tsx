@@ -1,6 +1,7 @@
-function openDevolutiva() {
-  if (typeof window === "undefined") return;
-  window.dispatchEvent(new CustomEvent("scaleo:start-diagnostic"));
+function goToDiagnostic() {
+  if (typeof document === "undefined") return;
+  const el = document.getElementById("diagnostico");
+  el?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 export function NextStep() {
@@ -54,10 +55,10 @@ export function NextStep() {
           <div className="mt-12">
             <button
               type="button"
-              onClick={openDevolutiva}
+              onClick={goToDiagnostic}
               className="inline-flex items-center rounded-full bg-paper px-8 py-4 text-sm font-medium text-navy transition-colors hover:bg-gold-soft"
             >
-              Solicitar Reunião de Devolutiva
+              Ir para o diagnóstico
             </button>
           </div>
         </div>
