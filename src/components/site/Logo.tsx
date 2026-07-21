@@ -1,5 +1,5 @@
 import React from "react";
-import logoAsset from "@/assets/scaleo-logotipo-gemini-photoroom.png.asset.json";
+import logo from "@/assets/scaleo-logo.png";
 
 interface LogoProps {
   className?: string;
