@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container-page grid gap-12 py-16 md:grid-cols-[1.2fr_1fr_1fr]">
         <div>
           <img
-            src={oldLogoAsset.url}
+            src={footerLogo}
             alt="Scaleo — Estrutura | Processo | Crescimento"
             className="h-12 md:h-14 w-auto"
           />
