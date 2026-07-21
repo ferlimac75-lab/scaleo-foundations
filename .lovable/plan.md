@@ -1,62 +1,71 @@
-## Alterações
+## Auditoria — o que está realmente em uso
 
-### 1. Hero (`src/components/site/sections/Hero.tsx`)
-- Remover os dois CTAs abaixo do parágrafo: botão "Iniciar diagnóstico" e link "Como trabalhamos →" (bloco inteiro `mt-10 flex ...`).
-- Reduzir o padding vertical de `pt-32 pb-20 md:pt-40 md:pb-28` para `pt-28 pb-12 md:pt-32 md:pb-16`.
+Renderizado hoje via `src/routes/index.tsx`: `Header`, `Footer`, `Hero`, `Problem`, `WhyItHappens`, `Calculator`, `MethodAlem`, `Diagnostic` (que usa `WhatsAppContact`), `NextStep`.
 
-### 2. Ordem das seções (`src/routes/index.tsx`)
-Nova sequência dentro de `<main>`:
-1. `Hero`
-2. `Problem` (O cenário) — já vem logo após o Hero
-3. `WhyItHappens` (reintroduzida — já existe em `src/components/site/sections/WhyItHappens.tsx`)
-4. `Calculator`
-5. `MethodAlem`
-6. `Diagnostic`
-7. `NextStep` (nova, substitui `FinalCta`)
+Assets efetivamente referenciados:
+- `Logo.tsx` (header) → `scaleo-logotipo-gemini-photoroom.png`
+- `Footer.tsx` → `scaleo-header-positiva.png`
+- `Hero.tsx` → `hero-consulting.jpg`
+- `__root.tsx` (favicon) → `public/favicon-a.png`
 
-Remover imports/usos de `About`, `HowItWorks` e `FinalCta`.
+## Observação importante sobre os logos
 
-### 3. Reduzir espaçamento vertical entre seções
-Diminuir o padding de todas as seções da home de `py-24 md:py-32` para `py-16 md:py-20`:
-- `Problem.tsx`
-- `WhyItHappens.tsx`
-- `Calculator.tsx` (verificar valor atual e ajustar)
-- `MethodAlem.tsx`
-- `Diagnostic.tsx` (idle state)
+Os logos hoje são pointers `.asset.json` que apontam para `/__l5e/assets-v1/...` (CDN do Lovable Assets). Você pediu explicitamente para **não** usar esses caminhos e ter os arquivos fisicamente no repositório.
 
-### 4. Nova seção `NextStep` (`src/components/site/sections/NextStep.tsx`)
-Substitui `FinalCta`. Mantém o visual escuro (bg-navy, texto paper) e a arquitetura do `FinalCta` atual, ajustando o conteúdo:
+Plano: baixar os 2 binários realmente usados a partir da CDN atual, gravá-los em `src/assets/` como PNGs de verdade, trocar os imports para importar o `.png` diretamente e apagar os pointers `.asset.json`. As dimensões/proporções em tela ficam idênticas (nenhuma classe CSS muda).
 
-- Eyebrow: "Próximo passo"
-- Título (h2): "Vamos analisar o seu diagnóstico."
-- Parágrafo 1: "O diagnóstico oferece uma visão inicial da estrutura comercial do seu escritório. Na conversa, interpretaremos os resultados, esclareceremos dúvidas e discutiremos quais prioridades fazem mais sentido para a realidade da sua empresa."
-- Parágrafo 2: "Sem apresentação comercial. Sem roteiros prontos. Apenas uma conversa consultiva baseada no seu diagnóstico."
-- Subtítulo: "Durante essa conversa, vamos:"
-- Lista (4 itens, com marcador em `text-gold`):
-  - Interpretar os resultados do diagnóstico.
-  - Identificar prioridades e oportunidades.
-  - Discutir possíveis caminhos para evoluir a estrutura comercial.
-  - Avaliar se faz sentido continuar esse trabalho em conjunto.
-- Botão: "Solicitar Reunião de Devolutiva" — dispara o mesmo evento que abre o formulário de devolutiva já existente (`scaleo:start-diagnostic` + rolar até o form, ou reutilizar o comportamento do CTA final do Diagnostic). Aciona `window.dispatchEvent(new CustomEvent("scaleo:open-devolutiva"))` e o `Diagnostic` passa a escutar esse evento para abrir/rolar até o `DevolutivaForm` diretamente (sem precisar refazer o diagnóstico). Se essa integração exigir mais lógica no `Diagnostic.tsx`, ajusto lá.
+Nomes definitivos propostos:
+- Header: `src/assets/scaleo-logo.png` (origem: `scaleo-logotipo-gemini-photoroom.png`)
+- Footer: `src/assets/scaleo-logo-footer.png` (origem: `scaleo-header-positiva.png`)
 
-Section id: `contato` (para preservar o link do menu/footer).
+## Arquivos a remover (comprovadamente não referenciados)
 
-### 5. Header (`src/components/site/Header.tsx`)
-Novos links, na ordem:
-- Método ALEM (`#metodo-alem`)
-- Diagnóstico (`#diagnostico`)
-- Próximo passo (`#contato`)
-- Contato (`#contato` — mantém, aponta para o rodapé/próximo passo)
+Componentes órfãos:
+- `src/components/site/sections/About.tsx`
+- `src/components/site/sections/HowItWorks.tsx`
+- `src/components/site/sections/WhatWillBeStructured.tsx`
+- `src/components/site/sections/DevolutivaForm.tsx`
+- `src/components/site/sections/FinalCta.tsx`
 
-Remover: Início, Problema, Como Funciona e o botão "Agendar conversa" (desktop e mobile).
+Assets (pointers `.asset.json`) de logos antigos, não referenciados:
+- `scaleo-logo-header.png.asset.json`
+- `scaleo-logo-vector.svg.asset.json`
+- `scaleo-logo.svg.asset.json`
+- `scaleo-logotipo-gemini.png.asset.json` (versão sem photoroom)
+- `scaleo-logotipo-positivo-recortado-64pct.png.asset.json`
+- `scaleo-logotipo-transparente-recortado.png.asset.json`
 
-### 6. Footer (`src/components/site/Footer.tsx`)
-- Remover o item de LinkedIn da lista "Contato".
-- Remover o link "Como trabalhamos" da coluna "Institucional" (a seção não existirá mais). Manter apenas Política de Privacidade e Termos de Uso.
+Assets substituídos por arquivos físicos (após a migração acima):
+- `scaleo-logotipo-gemini-photoroom.png.asset.json` (via CDN `lovable-assets delete`)
+- `scaleo-header-positiva.png.asset.json` (via CDN `lovable-assets delete`)
 
-### 7. Arquivos removidos do fluxo (mantidos no repo, sem uso)
-- `About.tsx`, `HowItWorks.tsx`, `FinalCta.tsx` deixam de ser importados em `index.tsx`. Não serão deletados.
+Imagens de seções órfãs em `src/assets/`:
+- `fernando-portrait.jpg` (usado só em `About`)
+- `section-process.jpg` (usado só em `HowItWorks`)
+- `section-diagnostic.jpg` (sem nenhuma referência)
 
-## Verificação
-- `bun run build`
-- Screenshot Playwright da home para confirmar nova ordem, espaçamentos reduzidos, header enxuto e seção "Próximo passo".
+Duplicatas em `public/`:
+- `public/scaleo-logo.png`
+- `public/scaleo-logo-nova.png`
+
+Mantidos em `public/`: `favicon-a.png`, `robots.txt`.
+
+## Arquivos a manter (em uso)
+
+- `src/assets/hero-consulting.jpg`
+- `src/assets/scaleo-logo.png` (novo, físico — header)
+- `src/assets/scaleo-logo-footer.png` (novo, físico — footer)
+- `public/favicon-a.png`, `public/robots.txt`
+- Todos os componentes/seções listados no início
+
+## Passos de execução
+
+1. Baixar os 2 binários da CDN atual (`curl` sobre a URL do `.asset.json`) e salvar em `src/assets/` com os nomes finais.
+2. Editar `src/components/site/Logo.tsx` — trocar `import ... .asset.json` por `import logo from "@/assets/scaleo-logo.png"` e usar `src={logo}`. Nenhuma alteração de classe/tamanho.
+3. Editar `src/components/site/Footer.tsx` — mesma troca para `scaleo-logo-footer.png`. Nenhuma alteração visual.
+4. Deletar os componentes órfãos e os assets/pointers listados acima. Usar `lovable-assets delete --file …` para os 2 pointers cujo binário agora vive no repo (evita órfão na CDN).
+5. Rodar `bun run build` para confirmar que nada quebrou. Inspecionar visualmente header, footer, hero e favicon.
+
+## Fora do escopo
+
+Sem alterações em textos, cores, tipografia, espaçamentos, breakpoints, animações, lógica do diagnóstico, ou qualquer outro comportamento. Nenhum redesign.
