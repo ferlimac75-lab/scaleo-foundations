@@ -1,4 +1,4 @@
-import oldLogoAsset from "@/assets/scaleo-header-positiva.png.asset.json";
+import footerLogo from "@/assets/scaleo-logo-footer.png";
 import { Mail, MessageCircle } from "lucide-react";
 
 export function Footer() {
