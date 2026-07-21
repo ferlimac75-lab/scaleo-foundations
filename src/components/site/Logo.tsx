@@ -1,5 +1,5 @@
 import React from "react";
-import logoAsset from "@/assets/scaleo-logotipo-gemini-photoroom.png.asset.json";
+import logo from "@/assets/scaleo-logo.png";
 
 interface LogoProps {
   className?: string;
@@ -9,7 +9,7 @@ interface LogoProps {
 export function Logo({ className = "h-10 md:h-12", style }: LogoProps) {
   return (
     <img
-      src={logoAsset.url}
+      src={logo}
       alt="Scaleo — Estrutura | Processo | Crescimento"
       className={`w-auto bg-transparent ${className}`}
       style={style}
